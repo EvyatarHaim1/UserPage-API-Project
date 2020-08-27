@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>API Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="user-container"></div>
+        <div class="quote-container"></div>
+        <div class="content-container">
+            <div class="pokemon-container"></div>
+            <div class="meat-container"></div>
+        </div>
+        <div class="friends">
+            <h4>Friends</h4>
+            <div class="friends-container">
+            </div>
+    </div>
+    <div class="buttons">
+        <button class="load-user-data" id="gen-page">Load User Data</button>
+        <button class="display-user id=" gen-page"">Display User</button>
+    </div>
+    </div>
+
+
+    <script id="user-container-template" type="text/x-handlebars-template">
+        <img src={{"Image"}} id="profile-pic"/>
+        <p class="user-info">{{Name}}</p>
+    </script>
+
+    <script id="friends-container-template" type="text/x-handlebars-template">
+        <ul>
+        {{#each Friends}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+    </script>
+
+    <script id="quote-container-template" type="text/x-handlebars-template">
+        <p>{{Quote}}</p>
+    </script>
+
+    <script id="pokemon-container-template" type="text/x-handlebars-template">
+        <img src="{{"Pokemon Image"}}"  id="pokemom-image"/>
+        <div id="pokemon-text">{{"Pokemon name"}}</div>
+    </script>
+
+    <script id="meat-container-template" type="text/x-handlebars-template">
+        <div>About Me:</div>
+        <p class="meat-text">{{"About Me"}}</p>
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="APIManager.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
